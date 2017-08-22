@@ -5,12 +5,16 @@ import {APP_ROUTING} from './app.routes';
 import { AppComponent } from './app.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { HistorialComponent } from './components/vehiculo/historial.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehiculoComponent,
-    HistorialComponent
+    HistorialComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
