@@ -7,6 +7,7 @@ import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { HistorialComponent } from './components/vehiculo/historial.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DiagnosticoComponent } from './components/diagnostico/diagnostico.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     VehiculoComponent,
     HistorialComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    DiagnosticoComponent
   ],
   imports: [
     BrowserModule,
