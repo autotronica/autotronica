@@ -1,7 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule,JsonpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
 import {APP_ROUTING} from './app.routes';
 
+//servicios
+import {VehiculoService} from './services/vehiculo.service';
+import {HistorialService} from './services/historial.service';
+//componentes
 import { AppComponent } from './app.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { HistorialComponent } from './components/vehiculo/historial.component';
@@ -20,9 +26,14 @@ import { DiagnosticoComponent } from './components/diagnostico/diagnostico.compo
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    FormsModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    VehiculoService,
+    HistorialService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
