@@ -17,7 +17,7 @@
       </button>
     </nav>
   </div>
-  
+
   <div class="container-fluid">
     <div class="row">
 
@@ -35,90 +35,18 @@
         <div class="row">
 
           <!-- CARD COL -->
-          <div class="col-12 col-md-4 col-lg-3 mb-4">
+          <div class="col-12 col-md-4 col-lg-3 mb-4" *ngFor="let vehiculo of vehiculos">
             <article class="card">
               <div class="card-body">
-                <h2 class="card-title">Gol Power</h2>
+                <h2 class="card-title">{{vehiculo.modelo}}</h2>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">M 2000 SD</li>
-                <li class="list-group-item">Volkswagen</li>
-                <li class="list-group-item"><span class="text-muted">1 mes atrás</span></li>
+                <li class="list-group-item">{{vehiculo.patente}}</li>
+                <li class="list-group-item">{{vehiculo.marca}}</li>
+                <li class="list-group-item"><span class="text-muted">{{vehiculo.anio | date:'dd-MM-yyyy' }}</span></li>
               </ul>
               <div class="card-footer">
-                <a href="#" class="btn btn-secondary btn-block btn-lg">Ver <span class="fa fa-angle-right" aria-hidden="true"></span></a>
-              </div>
-            </article>
-          </div>
-          <!-- /CARD COL -->
-
-          <!-- CARD COL -->
-          <div class="col-12 col-md-4 col-lg-3 mb-4">
-            <article class="card">
-              <div class="card-body">
-                <h2 class="card-title">Gol Power</h2>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">M 2000 SD</li>
-                <li class="list-group-item">Volkswagen</li>
-                <li class="list-group-item"><span class="text-muted">1 mes atrás</span></li>
-              </ul>
-              <div class="card-footer">
-                <a href="#" class="btn btn-secondary btn-block btn-lg">Ver <span class="fa fa-angle-right" aria-hidden="true"></span></a>
-              </div>
-            </article>
-          </div>
-          <!-- /CARD COL -->
-
-          <!-- CARD COL -->
-          <div class="col-12 col-md-4 col-lg-3 mb-4">
-            <article class="card">
-              <div class="card-body">
-                <h2 class="card-title">Gol Power</h2>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">M 2000 SD</li>
-                <li class="list-group-item">Volkswagen</li>
-                <li class="list-group-item"><span class="text-muted">1 mes atrás</span></li>
-              </ul>
-              <div class="card-footer">
-                <a href="#" class="btn btn-secondary btn-block btn-lg">Ver <span class="fa fa-angle-right" aria-hidden="true"></span></a>
-              </div>
-            </article>
-          </div>
-          <!-- /CARD COL -->
-
-          <!-- CARD COL -->
-          <div class="col-12 col-md-4 col-lg-3 mb-4">
-            <article class="card">
-              <div class="card-body">
-                <h2 class="card-title">Gol Power</h2>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">M 2000 SD</li>
-                <li class="list-group-item">Volkswagen</li>
-                <li class="list-group-item"><span class="text-muted">1 mes atrás</span></li>
-              </ul>
-              <div class="card-footer">
-                <a href="#" class="btn btn-secondary btn-block btn-lg">Ver <span class="fa fa-angle-right" aria-hidden="true"></span></a>
-              </div>
-            </article>
-          </div>
-          <!-- /CARD COL -->
-
-          <!-- CARD COL -->
-          <div class="col-12 col-md-4 col-lg-3 mb-4">
-            <article class="card">
-              <div class="card-body">
-                <h2 class="card-title">Gol Power</h2>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">M 2000 SD</li>
-                <li class="list-group-item">Volkswagen</li>
-                <li class="list-group-item"><span class="text-muted">1 mes atrás</span></li>
-              </ul>
-              <div class="card-footer">
-                <a href="#" class="btn btn-secondary btn-block btn-lg">Ver <span class="fa fa-angle-right" aria-hidden="true"></span></a>
+                <a [routerLink]="['/vehiculo/historial',1]" class="btn btn-secondary btn-block btn-lg">Ver <span class="fa fa-angle-right" aria-hidden="true"></span></a>
               </div>
             </article>
           </div>
