@@ -14,6 +14,7 @@ import { HistorialComponent } from './components/vehiculo/historial.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DiagnosticoComponent } from './components/diagnostico/diagnostico.component';
+import { PrincipalComponent } from './components/principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DiagnosticoComponent } from './components/diagnostico/diagnostico.compo
     HistorialComponent,
     FooterComponent,
     NavbarComponent,
-    DiagnosticoComponent
+    DiagnosticoComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

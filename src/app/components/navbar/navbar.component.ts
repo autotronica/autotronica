@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import {PrincipalComponent} from '../principal/principal.component';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  public ventana:boolean;
+  constructor() {
+    this.obtenerPrincipal(false);
+  }
 
   ngOnInit() {
+  }
+
+  obtenerPrincipal(ventanaprincipal:boolean){
+    this.ventana=ventanaprincipal;
   }
 
 }
