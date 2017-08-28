@@ -12,6 +12,7 @@ export class VehiculoComponent implements OnInit {
   public vehiculos:Vehiculo[];
   public errormensaje:any;
   public cargando:boolean;
+  public filtro:any=null;
 
   constructor(private router:Router,private route:ActivatedRoute,private vehiculoservice:VehiculoService) {
     this.consultaVehiculos();
@@ -33,5 +34,20 @@ export class VehiculoComponent implements OnInit {
       this.errormensaje=<any>error;
       console.log("Error en la consultaVehiculos: "+this.errormensaje);
     });
+  }
+
+  filtroVehiculos(){
+      this.cargando=true;
+      this.vehiculoservice.consultaVehiculo(this.filtro).subscribe(res=>{
+        this.vehiculos=res.vehiculos;
+        if(!this.vehiculos){
+          console.log("No hay vehiculos cargados");
+        }else{
+          this.cargando=false;
+        }
+      },error=>{
+        this.errormensaje=<any>error;
+        console.log("Error en la consultaVehiculos: "+this.errormensaje);
+      });
   }
 }

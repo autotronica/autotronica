@@ -8,7 +8,7 @@
       <div class="col-12 mt-3 mb-3">
         <div class="input-group input-group-lg">
           <label class="input-group-addon" for="se" id="sizing-addon1"><span class="sr-only">Buscar</span><span class="fa fa-search" aria-hidden="true"></span></label>
-          <input type="text" id="se" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="sizing-addon1">
+          <input type="text" id="filtro" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="sizing-addon1" [(ngModel)]="filtro" (keyup.enter)="filtroVehiculos()">
         </div>
       </div>
       <!-- /SEARCH -->

@@ -15,7 +15,9 @@ consultaVehiculos(){
   return this.http.get(this.url+"vehiculos").map(res=>res.json());
 }
 
-consultaVehiculo(){}
+consultaVehiculo(patente:string){
+    return this.http.get(this.url+"vehiculos/"+patente).map(res=>res.json());
+}
 
 modificarVehiculo(){}
 
